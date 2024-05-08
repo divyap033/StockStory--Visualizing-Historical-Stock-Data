@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Dashboard</title>
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+</head>
+
+<body>
+    <div id="plot">
+        <script>
+            var graphs = {{ graphJSON | safe }};
+            Plotly.plot('plot', JSON.parse(graphs), {});
+        </script>
+    </div>
+</body>
+
+</html>
